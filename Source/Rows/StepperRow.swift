@@ -78,6 +78,7 @@ open class StepperCell: Cell<Double>, CellType {
         valueLabel?.textColor = tintColor
         valueLabel?.alpha = row.isDisabled ? 0.3 : 1.0
         valueLabel?.text = row.displayValueFor?(row.value)
+        updateConstraints()
     }
 
     @objc func valueChanged() {
